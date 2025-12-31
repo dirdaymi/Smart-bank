@@ -1,4 +1,4 @@
-package ma.mundiapolis.Smart_bank.entities;
+package ma.mundiapolis.smart_bank.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

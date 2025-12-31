@@ -1,5 +1,6 @@
-package ma.mundiapolis.Smart_bank.entities;
+package ma.mundiapolis.smart_bank.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,5 +16,6 @@ public class Customer {
     private String name;
     private String email;
     @OneToMany(mappedBy = "customer")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // Évite la boucle infinie JSON
     private List<BankAccount> bankAccounts;
 }

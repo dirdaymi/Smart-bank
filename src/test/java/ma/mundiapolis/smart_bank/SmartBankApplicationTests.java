@@ -1,4 +1,4 @@
-package ma.mundiapolis.Smart_bank;
+package ma.mundiapolis.smart_bank;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
