@@ -1,0 +1,51 @@
+Document de Référence Bancaire – Smart Bank Maroc
+1. Comptes Bancaires
+1.1 Compte Courant
+Description : Compte principal pour les opérations quotidiennes.
+Frais de tenue de compte : 20 MAD/mois (gratuit pour les moins de 26 ans).
+Retraits aux DAB du réseau : gratuits.
+
+1.2 Compte Épargne
+Compte sur Carnet :
+Taux actuel : 3,0 % (net d’impôts).
+Plafond de dépôt : 200 000 MAD.
+Compte à Terme (CAT) :
+Taux fixe garanti (exemple : 3,5 % sur 12 mois).
+Dépôt minimum : 15 000 MAD.
+Blocage des fonds pour la durée choisie.
+
+2. Cartes Bancaires
+2.1 Carte de Débit (Visa Classic)
+Plafond Paiement : 30 000 MAD/jour.
+Plafond Retrait : 3 000 MAD/jour.
+Frais : 150 MAD/an (gratuite avec un revenu mensuel > 12 000 MAD sur le compte).
+Assurance : Protection des achats en ligne (jusqu’à 100 000 MAD).
+
+2.2 Carte de Crédit (Visa Premier / Gold)
+Plafond : 75 000 MAD/mois.
+Frais : 900 MAD/an (inclut assurance voyages et assistance).
+Avantages : Cashback de 0,5 % sur tous les achats.
+
+3. Prêts et Crédits
+3.1 Prêt Personnel
+Montant : 10 000 MAD à 750 000 MAD.
+Durée : 12 à 84 mois.
+Taux d’intérêt moyen : 4,5 % (TAEG).
+
+3.2 Prêt Immobilier
+Apport requis : Au moins 10 % du prix d’achat.
+Taux fixe actuel : 4,2 % (sur 20 ans).
+Durée maximale : 25 ans.
+
+4. Services en Ligne et Sécurité
+Virements instantanés : gratuits entre comptes de la banque.
+En cas de fraude : Contactez le service 24/7 au 05 22 00 00 00.
+
+5. Procédures
+Ouverture de compte : Pièce d’identité (CIN/Passeport), Justificatif de domicile, RIB.
+Délai : 48 heures en ligne.
+
+6. FAQ
+Comment changer mon code de carte ? Rendez-vous dans un DAB du réseau Smart Bank.
+Virement international ? Oui, frais de 100 MAD par virement hors zone.
+Perte de carte ? Bloquez-la immédiatement via l'application.

@@ -1,0 +1,74 @@
+<div class="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
+
+  <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+    <div>
+      <h1 class="text-3xl font-bold text-gray-800">Bonjour, {{ user.fullname }}</h1>
+      <p class="text-gray-500">Espace Client Sécurisé</p>
+    </div>
+    <div class="mt-4 md:mt-0">
+      <button class="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition flex items-center">
+        <span>Nouveau Virement</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+    <div class="lg:col-span-2 space-y-6">
+
+      <div class="bg-gradient-to-r from-gray-900 to-gray-700 rounded-2xl p-6 text-white shadow-xl relative overflow-hidden">
+        <div class="flex justify-between items-start z-10 relative">
+          <div>
+            <p class="text-gray-300 text-sm">Solde Disponible</p>
+            <h2 class="text-3xl font-bold mt-1">{{ account.balance }} MAD</h2>
+          </div>
+          <span class="bg-white/20 px-3 py-1 rounded text-xs font-semibold">Active</span>
+        </div>
+        <div class="mt-8 flex justify-between items-end z-10 relative">
+          <div>
+            <p class="text-gray-400 text-xs">IBAN</p>
+            <p class="font-mono tracking-widest">{{ account.iban }}</p>
+          </div>
+          <div class="text-xl font-bold italic">VISA</div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+        <div class="px-6 py-4 border-b border-gray-100">
+          <h3 class="font-bold text-gray-800">Dernières opérations</h3>
+        </div>
+        <ul class="divide-y divide-gray-100">
+          <li *ngFor="let tx of transactions" class="px-6 py-4 flex items-center justify-between hover:bg-gray-50">
+            <div class="flex items-center">
+              <div class="p-2 rounded-full mr-4" [ngClass]="{'bg-red-100 text-red-600': tx.type === 'DEBIT', 'bg-green-100 text-green-600': tx.type === 'CREDIT'}">
+                <span class="font-bold text-xs">{{ tx.type === 'DEBIT' ? 'D' : 'C' }}</span>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-800">{{ tx.label }}</p>
+                <p class="text-xs text-gray-500">{{ tx.date }}</p>
+              </div>
+            </div>
+            <span class="font-bold" [ngClass]="{'text-red-600': tx.type === 'DEBIT', 'text-green-600': tx.type === 'CREDIT'}">
+              {{ tx.type === 'DEBIT' ? '-' : '+' }} {{ tx.amount }} MAD
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+        <h3 class="font-bold text-gray-800 mb-4">Actions Rapides</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <button class="p-4 border rounded-lg hover:bg-blue-50 hover:border-blue-200 hover:text-blue-600 transition flex flex-col items-center">
+            <span class="text-sm font-medium">RIB</span>
+          </button>
+          <button class="p-4 border rounded-lg hover:bg-blue-50 hover:border-blue-200 hover:text-blue-600 transition flex flex-col items-center">
+            <span class="text-sm font-medium">Recharger</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

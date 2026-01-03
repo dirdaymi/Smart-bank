@@ -1,0 +1,41 @@
+<div class="flex h-screen bg-gray-100">
+
+  <aside class="w-64 bg-white shadow-md hidden md:block pt-20">
+    <div class="p-6">
+      <h1 class="text-2xl font-bold text-blue-600">AdminPanel</h1>
+    </div>
+    <nav class="mt-6 flex flex-col space-y-2">
+      <a routerLink="/admin/dashboard" routerLinkActive="bg-blue-50 text-blue-700 border-r-4 border-blue-700" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-700 transition cursor-pointer">
+        Vue d'ensemble
+      </a>
+      <a routerLink="/admin/users" routerLinkActive="bg-blue-50 text-blue-700 border-r-4 border-blue-700" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-700 transition cursor-pointer">
+        Utilisateurs
+      </a>
+      <a routerLink="/admin/transactions" routerLinkActive="bg-blue-50 text-blue-700 border-r-4 border-blue-700" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-700 transition cursor-pointer">
+        Transactions
+      </a>
+        <a routerLink="/admin/operations"
+           routerLinkActive="bg-blue-50 text-blue-700 border-r-4 border-blue-700"
+           class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-700 transition cursor-pointer">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Opérations (Débit/Crédit)
+        </a>
+        <a routerLink="/admin/accounts"
+           routerLinkActive="bg-blue-50 text-blue-700 border-r-4 border-blue-700"
+           class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-blue-700 transition cursor-pointer">
+            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+            Comptes (Accounts)
+        </a>
+    </nav>
+  </aside>
+
+    <div class="flex-1 flex flex-col overflow-hidden">
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-6 pt-24">
+
+            <router-outlet></router-outlet>
+
+        </main>
+    </div>
+
+</div>

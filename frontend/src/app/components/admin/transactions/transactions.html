@@ -1,0 +1,28 @@
+<div class="p-6 bg-gray-50 min-h-screen">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6">Flux des Transactions (Base H2)</h2>
+
+  <div class="bg-white shadow rounded-lg p-4">
+    <ul class="divide-y divide-gray-100">
+      <li *ngFor="let t of transactions" class="py-4 flex justify-between items-center hover:bg-gray-50 transition px-2">
+        <div class="flex items-center">
+          <div class="bg-blue-100 text-blue-600 p-2 rounded-full mr-3 text-xs font-bold">
+            {{ t.type }}
+          </div>
+          <div>
+            <p class="font-bold text-gray-800">Compte: {{ t.bankAccount?.id }}</p>
+            <p class="text-xs text-gray-500">{{ t.date | date:'medium' }}</p>
+            <p class="text-xs text-gray-400 italic">{{ t.description || 'Aucune description' }}</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <p class="font-bold text-lg" [ngClass]="{'text-green-600': t.type==='CREDIT', 'text-red-600': t.type==='DEBIT'}">
+            {{ t.type === 'DEBIT' ? '-' : '+' }} {{ t.amount | number:'1.2-2' }} MAD
+          </p>
+        </div>
+      </li>
+      <li *ngIf="transactions.length === 0" class="py-8 text-center text-gray-500">
+        Aucune transaction trouvée dans la base H2.
+      </li>
+    </ul>
+  </div>
+</div>
